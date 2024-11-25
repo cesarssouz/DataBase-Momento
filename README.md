@@ -18,6 +18,7 @@ SELECT COUNT(*) FROM momento.funcionarios;
 
 * E quanto ao Departamento de Tecnologia?
 
+
 R - 5
 ```sql
 SELECT COUNT(*) FROM momento.funcionarios WHERE departamento_id = 6;
