@@ -26,7 +26,10 @@ SELECT COUNT(*) FROM momento.funcionarios WHERE departamento_id = 6;
 ### Departamento de Vendas 
 
 * **Quantos funcionários trabalham no Departamento de Vendas?**
-Use uma consulta para descobrir o número total de funcionários alocados nesse departamento.
+  R - 5
+ ```sql
+SELECT COUNT(*) FROM momento.funcionarios WHERE departamento_id = 8;
+```
 
 * **Salários no Departamento de Vendas**
 
