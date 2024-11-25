@@ -5,6 +5,9 @@ Você está prestes a explorar o banco de dados da empresa "Momento"! Com essa b
 ### Departamento de Tecnologia 
 
 * Inclua suas próprias informações no departamento de Tecnologia da empresa.
+```sql
+INSERT INTO funcionarios(funcionario_id, primeiro_nome, sobrenome, email, senha, telefone, data_contratacao, cargo_id, salario, gerente_id, departamento_id) VALUES (307, 'César', 'Oliveira', 'cesarsouz10@gmai.com', 'cesar123', '11 998745989', 2024-25-11, 14, 100.000, NULL, 9 );
+```
 
 * Agora diga, quantos funcionários temos ao total na empresa?
 
