@@ -18,6 +18,11 @@ SELECT COUNT(*) FROM momento.funcionarios;
 
 * E quanto ao Departamento de Tecnologia?
 
+R - 5
+```sql
+SELECT COUNT(*) FROM momento.funcionarios WHERE departamento_id = 6;
+```
+
 ### Departamento de Vendas 
 
 * **Quantos funcionários trabalham no Departamento de Vendas?**
