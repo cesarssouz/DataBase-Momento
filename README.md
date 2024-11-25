@@ -16,8 +16,7 @@ R - 42
 SELECT COUNT(*) FROM momento.funcionarios;
 ```
 
-* E quanto ao Departamento de Tecnologia?
-
+* E quanto ao Departamento de Tecnologia? 
 
 R - 5
 ```sql
