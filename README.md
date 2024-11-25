@@ -10,6 +10,10 @@ INSERT INTO funcionarios(funcionario_id, primeiro_nome, sobrenome, email, senha,
 ```
 
 * Agora diga, quantos funcionários temos ao total na empresa?
+R - 42
+```sql
+SELECT COUNT(*) FROM momento.funcionarios;
+```
 
 * E quanto ao Departamento de Tecnologia?
 
