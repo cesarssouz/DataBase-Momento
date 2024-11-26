@@ -39,18 +39,21 @@ SELECT COUNT(*) FROM momento.funcionarios WHERE departamento_id = 8;
 SELECT SUM(salario) FROM momento.funcionarios WHERE departamento_id = 8;
 ```
 
-* Qual é o custo total dos salários do pessoal de Vendas? Isso nos ajuda a entender o orçamento do departamento!
- 
- R - R$ 51.500,00
+* Quanto o departamento de Vendas gasta em salários?
+
+  R - R$ 51.500,00
 ```sql
 SELECT SUM(salario) FROM momento.funcionarios WHERE departamento_id = 8;
 ```
 
-* Quanto o departamento de Vendas gasta em salários?
-
 * Quais são os produtos mais vendidos e quais têm pouca ou nenhuma saída?
 
 * Qual é o produto mais caro no inventário da empresa?
+
+  R - Sabre de luz (mace windu)
+  ```sql
+SELECT * FROM momento.produtos ORDER BY produto_price DESC;
+  ```
 
 ### Departamento de Inovações 
 
