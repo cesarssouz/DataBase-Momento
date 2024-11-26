@@ -32,8 +32,16 @@ SELECT COUNT(*) FROM momento.funcionarios WHERE departamento_id = 8;
 ```
 
 * **Salários no Departamento de Vendas**
+ R - R$ 51.500,00
+```sql
+SELECT SUM(salario) FROM momento.funcionarios WHERE departamento_id = 8;
+```
 
 * Qual é o custo total dos salários do pessoal de Vendas? Isso nos ajuda a entender o orçamento do departamento!
+ R - R$ 51.500,00
+```sql
+SELECT SUM(salario) FROM momento.funcionarios WHERE departamento_id = 8;
+```
 
 * Quanto o departamento de Vendas gasta em salários?
 
