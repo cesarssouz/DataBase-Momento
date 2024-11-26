@@ -51,9 +51,9 @@ SELECT SUM(salario) FROM momento.funcionarios WHERE departamento_id = 8;
 * Qual é o produto mais caro no inventário da empresa?
 
   R - Sabre de luz (mace windu)
-  ```sql
+```sql
 SELECT * FROM momento.produtos ORDER BY produto_price DESC;
-  ```
+```
 
 ### Departamento de Inovações 
 
