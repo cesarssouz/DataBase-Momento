@@ -59,6 +59,10 @@ SELECT * FROM momento.produtos ORDER BY produto_price DESC;
 
 * **Um novo departamento foi criado. O departamento de Inovações.** 
 Ele será locado no Brasil. Por favor, adicione-o no banco de dados da empresa colocando quaisquer informações que você achar relevantes.
+```sql
+NSERT INTO escritorios(escritorio_id,escritorio_nome,endereco,cep,cidade,estado_provincia,pais_id) VALUES (2990,"Estúdio de Inovação",'Itaim Paulista','081328567','São Paulo','São Paulo','BR');
+INSERT INTO departamentos(departamento_id,departamento_nome,escritorio_id) VALUES (22,'Inovação',2990);
+```
 
 * O departamento de Inovações está sem funcionários. Inclua alguns colegas de turma nesse departamento.  
 
