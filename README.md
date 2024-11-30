@@ -64,7 +64,12 @@ NSERT INTO escritorios(escritorio_id,escritorio_nome,endereco,cep,cidade,estado_
 INSERT INTO departamentos(departamento_id,departamento_nome,escritorio_id) VALUES (22,'Inovação',2990);
 ```
 
-* O departamento de Inovações está sem funcionários. Inclua alguns colegas de turma nesse departamento.  
+* O departamento de Inovações está sem funcionários. Inclua alguns colegas de turma nesse departamento.
+```sql
+INSERT INTO funcionarios(funcionario_id,primeiro_nome,sobrenome,email,senha,telefone,data_contratacao,cargo_id,salario,gerente_id,departamento_id) VALUES (270,'Rogerio','Gonzaga','rogeringamer@gmail.com','rog3ri0#','11 998764524','2024-11-30',20,3.000,NULL,22);
+INSERT INTO funcionarios(funcionario_id,primeiro_nome,sobrenome,email,senha,telefone,data_contratacao,cargo_id,salario,gerente_id,departamento_id) VALUES (271,'Roberto','William','roobertson9gmail.com','roBert$0n','11 998061554','2024-11-30',20,3.000,NULL,22);
+INSERT INTO funcionarios(funcionario_id,primeiro_nome,sobrenome,email,senha,telefone,data_contratacao,cargo_id,salario,gerente_id,departamento_id) VALUES (272,'Jefferson','Mendez','jeffer$on9@gmail.com','Jef78#','11 997064554','2024-11-30',20,3.000,NULL,22);
+```
 
 ### Funcionários
 
