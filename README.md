@@ -74,6 +74,7 @@ INSERT INTO funcionarios(funcionario_id,primeiro_nome,sobrenome,email,senha,tele
 ### Funcionários
 
 * Quantos funcionários da empresa Momento possuem conjuges?
+ 
   R - 37
 ```sql
 SELECT COUNT(*) FROM momento.funcionarios
