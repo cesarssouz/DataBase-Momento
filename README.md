@@ -74,6 +74,11 @@ INSERT INTO funcionarios(funcionario_id,primeiro_nome,sobrenome,email,senha,tele
 ### Funcionários
 
 * Quantos funcionários da empresa Momento possuem conjuges?
+ R - 37
+```sql
+SELECT COUNT(*) FROM momento.funcionarios
+INNER JOIN dependentes ON funcionarios.funcionario_id = dependentes.funcionario_id
+```
 
 * Qual o funcionário contratado há mais tempo na empresa?
 
