@@ -83,9 +83,24 @@ INNER JOIN dependentes ON funcionarios.funcionario_id = dependentes.funcionario_
 
 * Qual o funcionário contratado há mais tempo na empresa?
 
+  R - Steven Wayne
+```sql
+SELECT CONCAT(primeiro_nome, " ", sobrenome) AS nome_funcionario, data_contratacao FROM momento.funcionarios ORDER BY data_contratacao;
+```
+
 * Qual o funcionário contratado há menos tempo na empresa?
 
+  R - Roberto William
+```sql
+SELECT CONCAT(primeiro_nome, " ", sobrenome) AS nome_funcionario, data_contratacao FROM momento.funcionarios ORDER BY data_contratacao DESC;
+```
+
 * Quem são os funcionários com mais tempo na empresa, considerando a `data_contratacao`?
+
+  R - Steven Wayne, Jeniffer Whalen
+ ```sql
+SELECT CONCAT(primeiro_nome, " ", sobrenome) AS nome_funcionario, data_contratacao FROM momento.funcionarios ORDER BY data_contratacao;
+  ``` 
 
 * Como a média salarial dos funcionários da "Momento" evoluiu nos últimos anos?
 Dica: utilize a função `AVG()` para calcular a média salarial dos funcionários. e `GROUP BY` para agrupar os resultados por ano.
