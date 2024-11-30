@@ -128,18 +128,78 @@ SELECT AVG(salario) AS Media_Salarial FROM funcionarios WHERE departamento_id = 
 
 * Qual o departamento com a maior média salarial?
 
+  R - O departamentos de tecnologias 
+```sql
+SELECT funcionarios.departamento_id, departamentos.departamento_nome, AVG(salario) AS Media_Salarial FROM funcionarios
+INNER JOIN departamentos ON departamentos.departamento_id = funcionarios.departamento_id
+GROUP BY departamento_id 
+ORDER BY Media_Salarial DESC;
+```
+
 * Qual o departamento com o menor número de funcionários?
+
+  R - Os departamentos de administração, Recursos humanos, Relações Publicas, Contabilidade e Biotecnologia.
+```sql
+SELECT funcionarios.departamento_id, departamentos.departamento_nome, COUNT(*) FROM momento.funcionarios 
+INNER JOIN departamentos ON departamentos.departamento_id = funcionarios.departamento_id
+GROUP BY departamento_id
+ORDER BY COUNT(*);
+```
 
 ### Produtos
 
 * Pensando na relação quantidade e valor unitario, qual o produto mais valioso da empresa?
 
+  R - Uniforme do Superman
+ ```sql
+SELECT produto_nome, produto_price, quantidade FROM momento.vendas
+INNER JOIN produtos ON produtos.produto_id = vendas.produto_id
+ORDER BY quantidade DESC;
+```
+
 * Qual o produto mais vendido da empresa?
 
+  R - Uniforme do Superman
+```sql
+SELECT produto_nome, quantidade FROM momento.vendas
+INNER JOIN produtos ON produtos.produto_id = vendas.produto_id
+ORDER BY quantidade DESC;
+```
+
 * Qual o produto menos vendido da empresa?
+
+  R - Batarangues
+```sql
+SELECT produto_nome, quantidade FROM momento.vendas
+INNER JOIN produtos ON produtos.produto_id = vendas.produto_id
+ORDER BY quantidade;
+```
 
 ### Escritórios
 
 * Quantos escritórios a "Momento" possui em cada região? (Dica: relacione as tabelas regioes e escritorios).
 
+  R - 3 escritórios no Reino Unido, 3 nos EUA, 1 no Brasil, Canadá Alemanha e Wakanda.
+ ```sql
+SELECT paises.pais_nome, escritorios.pais_id, COUNT(*) FROM momento.escritorios
+INNER JOIN paises ON paises.pais_id = escritorios.pais_id
+GROUP BY pais_id
+ORDER BY COUNT(*) DESC;
+```
+
 * Qual é o custo total de suprimentos em cada escritório? Que tal ordenar os resultados para ver qual escritório possui os suprimentos mais caros?
+
+  R - Umbrella Corp: R$405.000,00 -
+Baxter Building: R$403.752,85 -
+Wayne escritorios: R$148.000,00 -
+Shuri's Palace: R$5.505,70 -
+Sala Winter: R$5.050,07 -
+House of Mystery escritorios: R$4.000,00 - 
+Arkham Base: R$2.000,00
+```sql
+SELECT escritorios.escritorio_nome, SUM(custo) FROM momento.suprimentos
+INNER JOIN escritorios ON escritorios.escritorio_id = suprimentos.escritorio_id
+GROUP BY escritorio_nome
+ORDER BY SUM(custo) DESC;
+```
+
