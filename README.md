@@ -105,6 +105,11 @@ SELECT CONCAT(primeiro_nome, " ", sobrenome) AS nome_funcionario, data_contratac
 * Como a média salarial dos funcionários da "Momento" evoluiu nos últimos anos?
 Dica: utilize a função `AVG()` para calcular a média salarial dos funcionários. e `GROUP BY` para agrupar os resultados por ano.
 
+R - De forma inconsistente e variavel.
+```sql
+SELECT AVG(salario) AS Media_Salarial, YEAR(data_contratacao) AS Ano FROM funcionarios GROUP BY data_contratacao ORDER BY YEAR(data_contratacao);
+```
+
 ### Médias salariais
 
 * Qual a média salarial dos funcionários da empresa Momento, excluindo-se o CEO, CMO e CFO?
