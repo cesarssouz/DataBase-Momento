@@ -114,7 +114,17 @@ SELECT AVG(salario) AS Media_Salarial, YEAR(data_contratacao) AS Ano FROM funcio
 
 * Qual a média salarial dos funcionários da empresa Momento, excluindo-se o CEO, CMO e CFO?
 
-* Qual a média salarial do departamento de tecnologia? 
+ R - R$ 7825.341463
+ ```sql
+SELECT AVG(salario) AS Media_Salarial FROM funcionarios WHERE cargo_id NOT IN (4,7,10);
+ ```
+
+* Qual a média salarial do departamento de tecnologia?
+
+   R - R$ 5760.000000
+ ```sql
+SELECT AVG(salario) AS Media_Salarial FROM funcionarios WHERE departamento_id = 6;
+```
 
 * Qual o departamento com a maior média salarial?
 
